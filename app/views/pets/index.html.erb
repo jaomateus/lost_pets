@@ -1,0 +1,11 @@
+<div class="container mt-3">
+  <h1>Lost Pets</h1>
+
+    <ul>
+      <% @pets.each do |pet| %>
+        <li><%= link_to pet.name.capitalize, pet_path(pet) %></li>
+      <% end %>
+    </ul>
+
+    <%= link_to "Add a new pet", new_pet_path %>
+</div>
